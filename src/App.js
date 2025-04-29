@@ -6,7 +6,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <link href="./output.css" rel="stylesheet"></link>
+        
+        <h1>Az Opus</h1>
         <HomePage /> 
           
       </header>

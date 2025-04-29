@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import logo from './870-200x300-blur_2-grayscale.jpg';
 
 const HomePage = () => {
   const [data, setData] = useState([]);
@@ -19,21 +20,25 @@ const HomePage = () => {
 
   return (
 
-    
-    <div>
-         <ul>
-        {data.map(item => (
-          <li key={item.id}>
-            <h2>{item.nev}</h2>
-            <p>alkotás azonosító:{item.alkotasAzonosito}</p>
-     <p>keletkezesKezdoIdopontjaInt:{item.keletkezesKezdoIdopontjaInt}</p>
-     <p>tipus:{item.tipus}</p>
-     <p>megjelenítendő név:{item.megjelenitendoNev}</p>
+
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }} >
+       
+ 
+        {data && data.map(item => (
+          
+          <span class="card">
+            <img src={logo} alt="logo" />
+            <p><b>{item.keletkezesKezdoIdopontjaInt}</b></p>
+            <h2 class="text-3xl font-bold underline">{item.nev}</h2>
+            <p>alkotás azonosító: {item.alkotasAzonosito}</p>
+     
+     <p>tipus: {item.tipus}</p>
+     <p>megjelenítendő név: {item.megjelenitendoNev}</p>
      <br></br>
-          </li>
+          </span>
         ))}
 
-      </ul>
+  
     </div>
   );
 };

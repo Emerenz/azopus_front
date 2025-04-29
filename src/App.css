@@ -1,5 +1,20 @@
+@import "tailwindcss";
+
+
 .App {
   text-align: center;
+}
+
+.card {
+
+  color: black;
+  background-color: white;
+  margin:5px;
+  padding:5px;
+  font-size: 14px;
+  text-align: left;
+
+
 }
 
 .App-logo {
@@ -14,7 +29,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
